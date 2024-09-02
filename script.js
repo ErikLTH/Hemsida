@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchWeather(city) {
-    const apiKey = '17e58207671947e98b7113036240305';
+    const apiKey; //Secreeett
     const encodedCity = encodeURIComponent(city); // Säkerställ korrekt URL-kodning
     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodedCity}&aqi=no`;
 
