@@ -1,0 +1,257 @@
+/* Basinställningar för sidan */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #007BFF 0%, #ffffff 98%); /* Starkare blå vid toppen som övergår till vit */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Justerar innehållet till vänster */
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 20px; /* Ger lite utrymme mellan loggan och navigationslänkarna */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+/* Huvudinnehåll */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerar innehållet horisontellt */
+    justify-content: center; /* Centrerar innehållet vertikalt om det finns extra utrymme */
+    width:100%; /* Full bredd för att hantera centreringen korrekt */
+    text-align: center; /* Säkerställer att text inuti är centrerad */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*Textfäldet för inmatning*/
+input[type="text"] {
+    width: 80%; /* Bredd anpassad till innehållet */
+    max-width: 700px; /* Maxbredd för att hålla designen enhetlig */
+    padding: 15px 20px; /* Ökad padding för bättre visuell storlek och komfort */
+    margin: 5px 0; /* Ökad marginal för visuell separation */
+    font-size: 22px; /* Större textstorlek för bättre läsbarhet */
+    border: 2px solid #0056b3; /* Solid kant för att framhäva fältet */
+    border-radius: 20px; /* Rundade hörn för ett mjukare och modernare utseende */
+    background-color: white; /* Vit bakgrundsfärg för att öka kontrasten mot text */
+    color: #333; /* Mörkare textfärg för bättre läsbarhet */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lägg till en subtil skugga för djup */
+    outline: none; /* Tar bort den blåa kanten vid fokus */
+}
+
+input[type="text"]:focus {
+
+    border-color: #2575fc; /* Ljusare blå färg vid fokus för att indikera aktivitet */
+    box-shadow: 0 0 8px rgba(50, 50, 250, 0.5); /* Starkare skugga för att markera fokus */
+}
+/* avstånd mellan titel och skrivfält*/
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color = black
+
+}
+
+/* Input och knapp */
+
+
+button {
+    padding: 12px 24px;
+    background-color: #1e60d5;
+    margin-bottom = 50px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0d47a1;
+
+}
+
+/* Fotnot */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    color: grey;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+/* Stil för väderdata och UV-index med centrering */
+#weather, #uv {
+    position = relative;
+    z-index = 3;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 20px; /* Ökad padding för bättre layout när texten är större */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stil för att framhäva viktiga väderdata */
+#weather span, #uv span {
+    font-weight: bold;
+    font-size: 32px; /* Ökad fontstorlek från 200px om det var ett skrivfel, annars sätt till önskad storlek */
+}
+
+/* Om textstorleken fortfarande är för liten, kan du öka den ytterligare:
+   Exempel: font-size: 48px; */
+
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    margin-right: -40px; /* Kompenserar för knappbredden */
+    z-index: 1;
+}
+
+button#searchButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+button#searchButton:hover {
+    color: #2575fc;
+
+}
+
+h1, header, button, searchButton, input, #weather, #uv{
+    font-family: 'Chakra Petch', sans-serif; /* Sätter Chakra Petch som typsnitt för alla rubriker */
+    font-weight: 700; /* Använder fetstil för att ge rubrikerna extra framträdande */
+    color: white; /* Blå färg på texten */
+}
+
+
+.search-box {
+    position: relative;
+    width: 300px; /* Anpassa denna bredd efter ditt input-fälts bredd */
+    display: flex;
+    justify-content: center; /* Centrerar barn-element */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Placerar dropdown precis under input-fältet */
+    left: 50%; /* Centrerar dropdown i förhållande till sökfältet */
+    transform: translateX(-50%); /* Korrigering för att exakt centrera dropdown */
+    background-color: #f9f9f9;
+    width: 90%; /* Justera bredden för att matcha designpreferenser */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px; /* Ger rundare hörn */
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px; /* Tillämpar rundade hörn även på länkar för konsekvent utseende */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+articleUV {
+    font-family: 'Chakra Petch', sans-serif;
+    line-height: 1.6;
+    max-width: 800px; /* begränsar bredden för att förbättra läsbarheten */
+    margin: 20px auto; /* centrera artikeln på sidan */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        color: #0056b3;
+}
+
+h1 {
+    color: #0056b3;
+    font-family: 'Chakra Petch', sans-serif; /
+}
+
+p {
+    font-family: 'Chakra Petch', sans-serif; /
+    center
+    text-align: justify;
+    text-indent: 20px;
+    margin-bottom: 10px;
+}

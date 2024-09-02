@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemsida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">Väder och UV-Kollare</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">Om mig</a></li>
+                <li><a href="uvimportant.html">Varför UV-index viktigt?</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <h1>Vänligen och skriv vilken stad du vill kolla vädret för!</h1>
+    <!-- Säkerställ att detta är korrekt i din HTML-fil -->
+    <div class="search-box">
+        <input type="text" id="city" placeholder="Ange en stad" aria-label="Stadsnamn" onfocus="showDropdown()" onblur="hideDropdown()">
+        <div id="dropdown" class="dropdown-content">
+            <a href="#" onclick="selectCity('Stockholm')">Stockholm</a>
+            <a href="#" onclick="selectCity('Göteborg')">Göteborg</a>
+            <a href="#" onclick="selectCity('Malmö')">Malmö</a>
+        </div>
+    </div>
+
+
+    <button id="fetchWeatherButton">Hämta väder</button>
+    <div id="weather">Laddar väderdata...</div>
+    <div id="uv">Laddar UV-index...</div>
+</main>
+
+
+<footer>
+    <p>© 2024 Erik Goch Gustafsson. Alla rättigheter förbehållna.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
