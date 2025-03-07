@@ -39,10 +39,10 @@ function showDropdown() {
 
 function hideDropdown() {
     var dropdown = document.getElementById("dropdown");
-    // Använd en timeout för att förhindra att menyn försvinner innan länken hinner aktiveras
+    //timeout för att förhindra att menyn försvinner innan länken hinner aktiveras
     setTimeout(function() {
         dropdown.style.display = "none";
-    }, 200); // Justera tiden vid behov
+    }, 200);
 }
 
 function selectCity(city) {
